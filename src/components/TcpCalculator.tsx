@@ -151,7 +151,7 @@ const TradingCalculator: React.FC = () => {
   return (
     <div className="p-4">
       <div className="grid grid-cols-3 gap-4 mb-4">
-      <input
+        <input
           name="highPoint"
           placeholder="High point"
           value={inputs.highPoint}
@@ -213,14 +213,18 @@ const TradingCalculator: React.FC = () => {
                     className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 text-right"
                     colSpan={2}
                   >
-                    $45.00
+                    {inputs.balance}
                   </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
                 <tr className={inputs.position === 'LONG' ? 'bg-green-100' : 'bg-red-100'}>
-                  <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{inputs.position}</td>
-                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">{inputs.currencyPair}</td>
+                  <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                    {inputs.position}
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                    {inputs.currencyPair}
+                  </td>
                   <td className="whitespace-nowrap px-4 py-2 text-gray-700 text-right">QTY</td>
                 </tr>
                 <tr>
@@ -278,9 +282,7 @@ const TradingCalculator: React.FC = () => {
               <tbody className="divide-y divide-gray-700">
                 <tr>
                   <td className="whitespace-nowrap px-4 py-2 font-medium">Limit 1</td>
-                  <td className="whitespace-nowrap px-4 py-2 text-right">
-                    {result.limit1}
-                  </td>
+                  <td className="whitespace-nowrap px-4 py-2 text-right">{result.limit1}</td>
                   <td className="whitespace-nowrap px-4 py-2 text-right">
                     {result.limit1Quantity.toFixed(1)}
                   </td>
@@ -293,9 +295,7 @@ const TradingCalculator: React.FC = () => {
                 </tr>
                 <tr>
                   <td className="whitespace-nowrap px-4 py-2 font-medium">Limit 2</td>
-                  <td className="whitespace-nowrap px-4 py-2 text-right">
-                    {result.limit2}
-                  </td>
+                  <td className="whitespace-nowrap px-4 py-2 text-right">{result.limit2}</td>
                   <td className="whitespace-nowrap px-4 py-2 text-right">
                     {result.limit2Quantity.toFixed(1)}
                   </td>
