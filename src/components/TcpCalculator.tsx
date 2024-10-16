@@ -93,7 +93,7 @@ const TradingCalculator: React.FC = () => {
     const leverage = parseFloat(inputs.leverage);
     const balance = parseFloat(inputs.balance);
     const limit1 = inputs.position === 'LONG' ? lowPoint + priceDiff * 0.382 : highPoint - priceDiff * 0.382;
-    const limit2 = inputs.position === 'LONG' ? lowPoint + priceDiff * 0.236 : highPoint - priceDiff * 0.236;
+    const limit2 = inputs.position === 'LONG' ? lowPoint + priceDiff * 0.17 : highPoint - priceDiff * 0.17;
     const tp = inputs.position === 'LONG' ? lowPoint + priceDiff * 1.272 : highPoint - priceDiff * 1.272;
     const sl = inputs.position === 'LONG' ? lowPoint + priceDiff * -0.05 : highPoint - priceDiff * -0.05;
 
